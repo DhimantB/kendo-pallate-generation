@@ -1,0 +1,65 @@
+/* Add application styles & imports to this file! */
+
+@use "sass:map";
+
+$kendo-is-dark-theme: true;
+@import "@progress/kendo-theme-default/dist/all";
+
+$kendo-colors: map.merge($kendo-colors, k-generate-color-variations('error', #398fcd, 'default'));
+
+tr:nth-child(1) {
+  color: map-get($kendo-colors, error-subtle);
+}
+tr:nth-child(2) {
+  color: map-get($kendo-colors, error-subtle-hover);
+}
+tr:nth-child(3) {
+  color: map-get($kendo-colors, error-subtle-active);
+}
+tr:nth-child(4) {
+  color: map-get($kendo-colors, error);
+}
+tr:nth-child(5) {
+  color: map-get($kendo-colors, error-hover);
+}
+tr:nth-child(6) {
+  color: map-get($kendo-colors, error-active);
+}
+tr:nth-child(7) {
+  color: map-get($kendo-colors, error-emphasis);
+}
+tr:nth-child(8) {
+  color: map-get($kendo-colors, error-on-subtle);
+}
+tr:nth-child(9) {
+  color: map-get($kendo-colors, on-error);
+}
+tr:nth-child(10) {
+  color: map-get($kendo-colors, error-on-surface);
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  th, td {
+    width: 200px
+  }
+  
+  th:nth-child(3) {
+    width: 500px;
+  }
+  
+  td:nth-child(3) {
+    width: 500px;
+  }
+  
