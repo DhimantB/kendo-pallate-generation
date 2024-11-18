@@ -11,6 +11,8 @@ import { bootstrapApplication } from '@angular/platform-browser';
   NOTE:
   <p>
   To generate new colors, go to the global_styles.scss and update input arguments as per your need.
+  <br>
+  <strong> $kendo-colors: map.merge($kendo-colors, k-generate-color-variations('error', #398fcd, 'default')); </strong>
   <br><br>  
   1st Argument: depends on which type of pallate you want to generate. <br>Ex: ['base', 'primary', 'secondary', 'tertiary', 'error', 'info', 'warning', 'success'];
   <br><br>
@@ -18,7 +20,6 @@ import { bootstrapApplication } from '@angular/platform-browser';
   <br><br>
   3rd Argument: Type of theme. Ex: default, bootstrap, fluent etc.
 <br><br>
-  <strong> $kendo-colors: map.merge($kendo-colors, k-generate-color-variations('error', #398fcd, 'default')); </strong>
   
   </p>
 
