@@ -16,10 +16,17 @@ import { bootstrapApplication } from '@angular/platform-browser';
   <br><br>  
   1st Argument: depends on which type of pallate you want to generate. <br>Ex: ['base', 'primary', 'secondary', 'tertiary', 'error', 'info', 'warning', 'success'];
   <br><br>
-  2nd Argument: Your color
+  2nd Argument: Your Main Color
   <br><br>
   3rd Argument: Type of theme. Ex: default, bootstrap, fluent etc.
 <br><br>
+
+At last, go to main.ts file and update the below variables as per your need<br>
+----------------------------------------------------------------------------
+<br>
+    base: string = 'primary'; // Type of pallate name
+<br>
+    color: string = '#2D73F5'; // Your main color
   
   </p>
 
@@ -88,15 +95,14 @@ export class App {
   title = 'kendo-angular-styling-sequence';
     colors: string [] = ['', '', '', '', '', '', '', '', '', ''];
 
-    base: string = '';
-    color: string = '';
+    base: string = 'primary';
+    color: string = '#2D73F5';
 
     constructor(public element: ElementRef) {
       setTimeout(() => this.setFontColor());
   }
 
   setFontColor() {
-
       for (let i = 0; i < 10; i++) {
           const id = 'c' + i;
           this.colors[i] = this.rgbToHex(getComputedStyle(document.getElementById(id)!).color);

@@ -2,40 +2,40 @@
 
 @use "sass:map";
 
-$kendo-is-dark-theme: true;
+$kendo-is-dark-theme: false;
 @import "@progress/kendo-theme-default/dist/all";
 
-$kendo-colors: map.merge($kendo-colors, k-generate-color-variations('error', #398fcd, 'default'));
+$kendo-colors: map.merge($kendo-colors, k-generate-color-variations('primary', #2D73F5, 'default'));
 
 tr:nth-child(1) {
-  color: map-get($kendo-colors, error-subtle);
+  color: map-get($kendo-colors, primary-subtle);
 }
 tr:nth-child(2) {
-  color: map-get($kendo-colors, error-subtle-hover);
+  color: map-get($kendo-colors, primary-subtle-hover);
 }
 tr:nth-child(3) {
-  color: map-get($kendo-colors, error-subtle-active);
+  color: map-get($kendo-colors, primary-subtle-active);
 }
 tr:nth-child(4) {
-  color: map-get($kendo-colors, error);
+  color: map-get($kendo-colors, primary);
 }
 tr:nth-child(5) {
-  color: map-get($kendo-colors, error-hover);
+  color: map-get($kendo-colors, primary-hover);
 }
 tr:nth-child(6) {
-  color: map-get($kendo-colors, error-active);
+  color: map-get($kendo-colors, primary-active);
 }
 tr:nth-child(7) {
-  color: map-get($kendo-colors, error-emphasis);
+  color: map-get($kendo-colors, primary-emphasis);
 }
 tr:nth-child(8) {
-  color: map-get($kendo-colors, error-on-subtle);
+  color: map-get($kendo-colors, primary-on-subtle);
 }
 tr:nth-child(9) {
-  color: map-get($kendo-colors, on-error);
+  color: map-get($kendo-colors, on-primary);
 }
 tr:nth-child(10) {
-  color: map-get($kendo-colors, error-on-surface);
+  color: map-get($kendo-colors, primary-on-surface);
 }
 
 table {
