@@ -10,7 +10,7 @@ import { bootstrapApplication } from '@angular/platform-browser';
 
   NOTE:
   <p>
-  To generate new colors, go to the global_styles.scss and update input arguments as per your need.
+  To generate new colors, go to the <strong>global_styles.scss</strong> and update input arguments as per your need.
   <br>
   <strong> $kendo-colors: map.merge($kendo-colors, k-generate-color-variations('error', #398fcd, 'default')); </strong>
   <br><br>  
@@ -20,8 +20,11 @@ import { bootstrapApplication } from '@angular/platform-browser';
   <br><br>
   3rd Argument: Type of theme. Ex: default, bootstrap, fluent etc.
 <br><br>
+Note: If you want to change the light/dark mode then inside <strong>global_styles.scss</strong> look for the below line<br>
+$kendo-is-dark-theme: false; // Update this flag as per your need
+<br><br>
 
-At last, go to main.ts file and update the below variables as per your need<br>
+At last, go to <strong>main.ts</strong> file and update the below variables as per your need<br>
 ----------------------------------------------------------------------------
 <br>
     base: string = 'primary'; // Type of pallate name
