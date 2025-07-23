@@ -8,32 +8,75 @@ import { bootstrapApplication } from '@angular/platform-browser';
   imports:[CommonModule],
   template: `
 
-  NOTE:
-  <p>
-  To generate new colors, go to the <strong>global_styles.scss</strong> and update input arguments as per your need.
-  <br>
-  <strong> $kendo-colors: map.merge($kendo-colors, k-generate-color-variations('error', #398fcd, 'default')); </strong>
-  <br><br>  
-  1st Argument: depends on which type of pallate you want to generate. <br>Ex: ['base', 'primary', 'secondary', 'tertiary', 'error', 'info', 'warning', 'success'];
-  <br><br>
-  2nd Argument: Your Main Color
-  <br><br>
-  3rd Argument: Type of theme. Ex: default, bootstrap, fluent etc.
-<br><br>
-Note: If you want to change the light/dark mode then inside <strong>global_styles.scss</strong> look for the below line<br>
-$kendo-is-dark-theme: false; // Update this flag as per your need
-<br><br>
-
-At last, go to <strong>main.ts</strong> file and update the below variables as per your need<br>
-----------------------------------------------------------------------------
-<br>
-    base: string = 'primary'; // Type of pallate name
-<br>
-    color: string = '#2D73F5'; // Your main color
-  
+  <div style="font-family: Roboto, sans-serif; font-size: 14px; line-height: 1.6; color: #333;">
+  <p style="margin-bottom: 1rem;">
+    <strong>NOTE:</strong><br><br>
+    To generate new colors, go to the 
+    <strong style="color: #2D73F5;">global_styles.scss</strong> 
+    and update input arguments as per your need:
   </p>
 
-  <button (click)="copyPalates()">Copy the Last Column Values in Same Sequence</button>
+  <div style="background: #f4f8fc; border-left: 4px solid #2D73F5; padding: 0.5rem; margin-bottom: 1rem;">
+    <code style="font-size: 13px; color: #c7254e; background-color: #f9f2f4; padding: 0.2rem 0.4rem; display: inline-block;">
+      $kendo-colors: map.merge($kendo-colors, k-generate-color-variations('error', #398fcd, 'default'));
+    </code>
+  </div>
+
+  <ul style="padding-left: 1.2rem; margin-bottom: 1.5rem;">
+    <li><strong>1st Argument:</strong> Palette type you want to generate. <br>
+      Example: <code>['base', 'primary', 'secondary', 'tertiary', 'error', 'info', 'warning', 'success']</code>
+    </li>
+    <li style="margin-top: 0.5rem;"><strong>2nd Argument:</strong> Your main color.</li>
+    <li style="margin-top: 0.5rem;"><strong>3rd Argument:</strong> Theme type. Example: <code>'default'</code>, <code>'bootstrap'</code>, <code>'fluent'</code>, etc.</li>
+  </ul>
+
+  <p style="margin-bottom: 1rem;">
+    To change light/dark mode, in 
+    <strong style="color: #2D73F5;">global_styles.scss</strong>, update:
+  </p>
+
+  <div style="background: #fff8e1; border-left: 4px solid #f9a825; padding: 0.5rem; margin-bottom: 1rem;">
+    <code style="font-size: 13px; color: #8a6d3b; background-color: #fcf8e3; padding: 0.2rem 0.4rem; display: inline-block;">
+      $kendo-is-dark-theme: false; // Update this flag as per your need
+    </code>
+  </div>
+
+  <p style="margin-bottom: 1rem;">
+    Lastly, update the following variables in 
+    <strong style="color: #2D73F5;">main.ts</strong> as per your need:
+  </p>
+
+  <div style="background: #e8f5e9; border-left: 4px solid #43a047; padding: 0.5rem;">
+    <code style="font-size: 13px; color: #2e7d32; background-color: #f1f8e9; padding: 0.2rem 0.4rem; display: block; margin-bottom: 0.5rem;">
+      base: string = 'primary'; // Type of palette name
+    </code>
+    <code style="font-size: 13px; color: #2e7d32; background-color: #f1f8e9; padding: 0.2rem 0.4rem; display: block;">
+      color: string = '#2D73F5'; // Your main color
+    </code>
+  </div>
+</div>
+
+<br>
+  <br>
+
+  <button 
+  (click)="copyPalates()" 
+  style="
+    background-color: #2D73F5;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: Roboto, sans-serif;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#1b5edb'"
+  onmouseout="this.style.backgroundColor='#2D73F5'"
+>
+  Copy the Last Column Values in Same Sequence
+</button>
 
   <br>
   <br>
